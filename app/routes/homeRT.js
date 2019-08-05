@@ -3,7 +3,7 @@ module.exports = function(application) {
 		application.app.controllers.home.index(application, req, res);
 	});
 
-	application.post('/new', function(req, res) {
+	application.post('/phoneForm', function(req, res) {
 		var randon = Math.floor(Math.random() * (4 - 1 + 1) + 1);
 		switch(randon) {
 			case 1:
