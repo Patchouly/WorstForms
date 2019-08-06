@@ -5,6 +5,7 @@
         <title>Cadastre seu telefone</title>
         <!-- JQuery -->
         <script src="js/jquery-2.2.1.js"></script>
+        <script src="js/phoneFormSelector.js"></script>
         <!-- bootstrap - link cdn -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" scrossorigin="anonymous">
         <!-- incluindo css -->
@@ -16,25 +17,19 @@
     <body>
         <div class="container">
             <div class="row vertical-offset-80">
-                <div class="col-md-4 col-md-offset-4">
+                <div class="col-md-8 col-md-offset-2">
                     <div class="panel panel-default">
                         <div class="panel-heading">                                
                             <div class="row-fluid user-row">
-                                <img src="../media/Aqua_Phone-logo.jpg" class="img-responsive" alt="Multiroom Chat"/>
+                                <h3>Cadastre seu telefone</h3>
                             </div>
                         </div>
-                        <div class="panel-body">
-                            <form accept-charset="UTF-8" role="form" class="form-signin" action="/phoneForm" method="post">
-                                <fieldset>
-                                    <br/>
-                                    <input class="btn btn-lg btn-success btn-block" type="submit" id="entrar" value="Cadastre seu telefone">
-                                </fieldset>
-                            </form>
-                        </div>
+                        <div id="phoneForm" class="phoneForm">
+                            <%- body %>
+                        </div>	
                     </div>
                 </div>
             </div>
         </div>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" crossorigin="anonymous"/>
     </body>
 </html>

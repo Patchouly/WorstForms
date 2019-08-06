@@ -1,16 +1,19 @@
 module.exports.index = function(application, req, res) {
-    res.render("index");
+    res.render("index",{layout:'false'});
 };
 
 module.exports.form1 = function(application, req, res) {
-    res.render("form1");
+    res.render("pages/form1",{layout:'layout'});
 };
+
 module.exports.form2 = function(application, req, res) {
-    res.render("form2");
+    res.render("pages/form2",{layout:'layout'});
 };
+
 module.exports.form3 = function(application, req, res) {
-    res.render("form3");
+    res.render("pages/form3",{layout:'layout'});
 };
+
 module.exports.form4 = function(application, req, res) {
-    res.render("form4");
+    res.render("pages/form4",{layout:'layout'});
 };

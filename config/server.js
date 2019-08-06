@@ -18,6 +18,7 @@
 * - Instalar o consign {npm install consign --save} (plugin que facilita a localização das rotas e módulos)
 * - Instalar body-parser {npm install body-parser --save} (plugin do express para preencher os dados enviados pelo post no model)
 * - Instalar express validator {npm install express-validator --save} (plugin que valida os dados do post)
+* - Instalar express-partials {npm install express-partials --save} (plugin que permite templating)
 * - Abrir/Mudar terminal, aperta "Ctrl + Shift + P" procura settings.json e adiciona: 
 *	//"terminal.integrated.shell.windows": "C:\\Windows\\System32\\cmd.exe",
 *   //"terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
@@ -37,12 +38,18 @@ var bodyParser = require('body-parser');
 /* importar o módulo do express-validator */
 var expressValidator = require('express-validator');
 
+/* importar o módulo do express-ejs-layouts */
+var partials = require('express-partials')
+
 /* iniciar o objeto do express */
 var app = express();
 
 /* setar as variáveis 'view engine' e 'views' do express */
 app.set('view engine', 'ejs');
-app.set('views', './app/views/pages');
+app.set('views', './app/views');
+
+/* configurar o express-ejs-layouts */
+app.use(partials())          
 
 /* configurar o middleware express.static */
 app.use(express.static('./app/views/assets'));

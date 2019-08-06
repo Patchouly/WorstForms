@@ -26,6 +26,7 @@
     "consign": "^0.1.6",
     "ejs": "^2.6.2",
     "express": "^4.17.1",
+    "express-partials": "^0.3.0",
     "express-validator": "^6.1.1",
     "mongo": "^0.1.0"
   }
