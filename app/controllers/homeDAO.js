@@ -17,3 +17,7 @@ module.exports.form3 = function(application, req, res) {
 module.exports.form4 = function(application, req, res) {
     res.render("pages/form4",{layout:'layout'});
 };
+
+module.exports.salvar = function(application, req, res) {
+    var dadosForm = req.body;
+}
