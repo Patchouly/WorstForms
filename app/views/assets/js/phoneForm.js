@@ -3,13 +3,12 @@ $(document).ready(function() {
         window.location.href = '/logout';
     });
 
-    $('#commitPhone').click(function(){
+    $('.digit').change(function(){
         var number = "";
         $('.digit').each(function( index ) {
             number += $(this).children("option:selected").text();
         });
-        $('.phoneNumber').val(number);
-        $('#form1submit').click();
+        $('.phoneNumber').val(formatPhone(number));
     });
 });
 

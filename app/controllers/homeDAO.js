@@ -20,6 +20,5 @@ module.exports.form4 = function(application, req, res) {
 
 module.exports.salvar = function(application, req, res) {
     var dadosForm = req.body;
-    console.log("teste2: "+dadosForm);
     res.render("index",{layout:'false', dadosForm : dadosForm});
 }

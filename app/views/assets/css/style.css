@@ -24,6 +24,6 @@ img {
     visibility: hidden;
 }
 
-#form1submit {
-    visibility: hidden;
-}
+#indexPhoneNumber {
+    text-align: center;
+  }
