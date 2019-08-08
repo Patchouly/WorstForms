@@ -19,3 +19,11 @@
 img {
     vertical-align: middle;
 }
+
+.phoneNumber {
+    visibility: hidden;
+}
+
+#form1submit {
+    visibility: hidden;
+}

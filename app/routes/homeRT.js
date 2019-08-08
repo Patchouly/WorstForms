@@ -22,4 +22,8 @@ module.exports = function(application) {
 				application.app.controllers.homeDAO.index(application, req, res);
 		  }
 	});
+
+	application.post('/submit', function(req, res) {
+		application.app.controllers.homeDAO.salvar(application, req, res);
+	});
 };
