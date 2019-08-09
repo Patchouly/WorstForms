@@ -10,6 +10,11 @@ $(document).ready(function() {
         });
         $('.phoneNumber').val(formatPhone(number));
     });
+
+    $('.form2range').on('input', function(){
+        var number = $(this).val();
+        $('#indexPhoneNumber').val(formatPhone(number));
+    });
 });
 
 function formatPhone(number) {

@@ -1,5 +1,13 @@
-<div>
-    <form>
-        qualquer coisa form2
-    </form>
-</div>
+<form accept-charset="UTF-8" role="form" class="form2" action="/submit" method="post">
+    <fieldset>
+        <input id="indexPhoneNumber" class="form-control center" name="phoneNumber" type="phoneNumber" value="<%=dadosForm.phoneNumber%>" readonly>
+        <div class="d-flex justify-content-center my-4">
+            <span class="font-weight-bold indigo-text mr-2 mt-1">(00)00000-0000</span>
+            <div class="range-field">
+                <input class="custom-range form2range" type="range" value="0"  min="0" max="99999999999">
+            </div>
+            <span class="font-weight-bold indigo-text ml-2 mt-1">(99)99999-9999</span>
+        </div>
+        <input type="submit" id="form2submit" class="btn btn-lg btn-success center" value="Cadastrar"/>
+    </fieldset>
+</form>

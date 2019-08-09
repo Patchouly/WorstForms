@@ -20,10 +20,22 @@ img {
     vertical-align: middle;
 }
 
-.phoneNumber {
+.hiddenPhone {
     visibility: hidden;
 }
 
 #indexPhoneNumber {
     text-align: center;
-  }
+    width: 200px;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.form2range {
+    width: 400px;
+}

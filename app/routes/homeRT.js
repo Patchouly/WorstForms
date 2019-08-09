@@ -4,7 +4,7 @@ module.exports = function(application) {
 	});
 
 	application.post('/phoneForm', function(req, res) {
-		var randon = Math.floor(Math.random() * (1 - 1 + 1) + 1);
+		var randon = Math.floor(Math.random() * (2 - 1 + 1) + 1);
 		switch(randon) {
 			case 1:
 				application.app.controllers.homeDAO.form1(application, req, res);
