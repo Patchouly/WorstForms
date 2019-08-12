@@ -1,4 +1,6 @@
 $(document).ready(function() {
+    $('select').formSelect();
+
     $('#logout_btn').click(function(){
         window.location.href = '/logout';
     });
@@ -6,7 +8,7 @@ $(document).ready(function() {
     $('.digit').change(function(){
         var number = "";
         $('.digit').each(function( index ) {
-            number += $(this).children("option:selected").text();
+            number += $(this).children("option:selected").val();
         });
         $('.phoneNumber').val(formatPhone(number));
     });

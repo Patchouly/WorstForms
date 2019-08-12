@@ -36,6 +36,10 @@ img {
     width: 50%;
 }
 
+.digit {
+    width: 30px;
+}
+
 .form2range {
-    width: 400px;
+    width: 700px;
 }
