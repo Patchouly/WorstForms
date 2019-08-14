@@ -43,3 +43,7 @@ img {
 .form2range {
     width: 700px;
 }
+
+.progress {
+    display: none;
+}
