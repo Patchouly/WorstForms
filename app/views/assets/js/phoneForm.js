@@ -26,7 +26,37 @@ $(document).ready(function() {
         $('.hiddenPhone').val(formatPhone(number));
     });
     
-    addForm3Values();
+    if ($(".form3").length) {
+        addForm3Values();
+    }
+
+    if ($(".form4").length) {
+        setInterval(function() {
+            $('.randomizing').each(function( index ) {
+                if ($(this).children().text() >= 9) {
+                    $(this).children().text(0);
+                } else {
+                    $(this).children().html(parseInt($(this).children().html(), 10)+1);
+                }
+            });
+        }, 200);
+        $('.stopDigit').each(function( index ) {
+            $(this).addClass('randomizing');
+        });
+    }
+
+    $('.stopDigit').click(function(){
+        if ($(this).hasClass('randomizing')) {
+            $(this).removeClass('randomizing');
+            var number = "";
+            $('.stopDigit').each(function( index ) {
+                number += parseInt($(this).children().html());
+            });
+            $('.hiddenPhone').val(formatPhone(number));
+        } else {
+            $(this).addClass('randomizing');
+        }
+    });
 
     M.AutoInit(); //Inicializa todos os componentes Materialize
 });
@@ -54,7 +84,6 @@ function addForm3Values() {
             value = pad(i, 4)
             $("<option></option>").attr("value",value).text(value).appendTo(section);
         }
-        console.log("adicionado");
     }
 }
 
