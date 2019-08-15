@@ -31,6 +31,7 @@ $(document).ready(function() {
     }
 
     if ($(".form4").length) {
+        console.log("form4");
         setInterval(function() {
             $('.randomizing').each(function( index ) {
                 if ($(this).children().text() >= 9) {
@@ -42,6 +43,19 @@ $(document).ready(function() {
         }, 200);
         $('.stopDigit').each(function( index ) {
             $(this).addClass('randomizing');
+        });
+    }
+
+    if ($("#form5").length) {
+        $("body").mousemove(function( event ) {
+            var pageCoords =  "799" + pad(parseInt(event.pageX), 4) + pad(parseInt(event.pageY), 4) ;
+            $('#indexPhoneNumber').val(formatPhone(pageCoords));
+            $('.hiddenPhone').val(formatPhone(pageCoords));
+        });
+        $(document).on('keypress',function(e) {
+            if(e.which == 13) {
+                $("#form5submit").click();
+            }
         });
     }
 
