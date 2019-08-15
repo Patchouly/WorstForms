@@ -7,7 +7,7 @@ module.exports = function(application) {
 		var randon = Math.floor(Math.random() * (1 - 1 + 1) + 1);
 		switch(randon) {
 			case 1:
-				application.app.controllers.homeDAO.form5(application, req, res);
+				application.app.controllers.homeDAO.form6(application, req, res);
 				break;
 			case 2:
 				application.app.controllers.homeDAO.form2(application, req, res);

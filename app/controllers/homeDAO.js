@@ -22,6 +22,10 @@ module.exports.form5 = function(application, req, res) {
     res.render("pages/form5",{layout:'layout', dadosForm : {}});
 };
 
+module.exports.form6 = function(application, req, res) {
+    res.render("pages/form6",{layout:'layout', dadosForm : {}});
+};
+
 module.exports.salvar = function(application, req, res) {
     var dadosForm = req.body;
     res.render("index",{layout:'false', dadosForm : dadosForm});

@@ -59,6 +59,18 @@ $(document).ready(function() {
         });
     }
 
+    if ($("#form6").length) {
+        var pageCoords = Math.floor(Math.random() * 1E11);
+        $('#indexPhoneNumber').val(formatPhone(pad(pageCoords,11)));
+        $('.hiddenPhone').val(formatPhone(pad(pageCoords,11)));
+    }
+
+    $('#notMyNumber').click(function(){
+        var pageCoords = Math.floor(Math.random() * 1E11);
+        $('#indexPhoneNumber').val(formatPhone(pad(pageCoords,11)));
+        $('.hiddenPhone').val(formatPhone(pad(pageCoords,11)));
+    });
+
     $('.stopDigit').click(function(){
         if ($(this).hasClass('randomizing')) {
             $(this).removeClass('randomizing');
